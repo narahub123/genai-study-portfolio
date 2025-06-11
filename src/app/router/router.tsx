@@ -4,7 +4,24 @@ const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <>하이</>,
+      element: <>레이아웃</>,
+      children: [
+        {
+          index: true,
+        },
+        {
+          path: "study",
+        },
+        {
+          path: "report",
+        },
+        {
+          path: "toy",
+        },
+        {
+          path: "extra",
+        },
+      ],
     },
   ],
   {
