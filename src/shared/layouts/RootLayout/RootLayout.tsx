@@ -1,10 +1,9 @@
 import styles from "./RootLayout.module.css";
 import { joinClassNames } from "../../utils/index";
 import type { IHeader } from "../../types";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { navArr } from "../../data";
-import { Toggle } from "../../../features";
+import { Navbar, Toggle } from "../../../features";
 
 interface RootLayoutProps {
   className?: string;
@@ -47,25 +46,7 @@ const RootLayout = ({ className }: RootLayoutProps) => {
           </div>
           {
             <div className={styles["navigation__wrapper"]}>
-              <nav className={styles["navigation"]} role="tablist">
-                {navArr.map((nav) => (
-                  <NavLink
-                    to={nav.path}
-                    className={({ isActive }) =>
-                      joinClassNames([
-                        styles["nav__link"],
-                        isActive
-                          ? styles["nav__link--active"]
-                          : styles["nav__link--inactive"],
-                      ])
-                    }
-                    key={nav.path}
-                    role="tab"
-                  >
-                    {nav.name}
-                  </NavLink>
-                ))}
-              </nav>
+              <Navbar />
             </div>
           }
         </div>

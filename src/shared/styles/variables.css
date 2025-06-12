@@ -1,8 +1,11 @@
 :root {
   --bg-dark: #1b1b1b;
   --color-dark: #fff3e0;
+  --hover-dark: hsl(0, 0%, 14%);
+
   --bg-light: #fff;
   --color-light: #1b1b1b;
+  --hover-light: #f9f9f9;
 
   --transition-duration-normal: 0.3s;
 }

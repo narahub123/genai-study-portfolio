@@ -2,11 +2,13 @@
 body[data-bgTheme="dark"] {
   --bg-color: var(--bg-dark);
   --text-color: var(--color-dark);
+  --hover-color: var(--hover-dark);
 }
 
 body[data-bgTheme="light"] {
   --bg-color: var(--bg-light);
   --text-color: var(--color-light);
+  --hover-color: var(--hover-light);
 }
 
 /* prefers-color-scheme 기반 기본 테마 (선택 사항) */
@@ -14,6 +16,7 @@ body[data-bgTheme="light"] {
   body:not([data-bgTheme]) {
     --bg-color: var(--bg-dark);
     --text-color: var(--color-dark);
+    --hover-color: var(--hover-dark);
   }
 }
 
@@ -21,5 +24,6 @@ body[data-bgTheme="light"] {
   body:not([data-bgTheme]) {
     --bg-color: var(--bg-light);
     --text-color: var(--color-light);
+    --hover-color: var(--hover-light);
   }
 }
