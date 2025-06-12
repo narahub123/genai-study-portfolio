@@ -3,7 +3,7 @@ import { joinClassNames } from "../../utils/index";
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FocusTrap, Navbar, Toggle } from "../../../features";
-import { headerObj } from "../../data";
+import { headerObj, navArr } from "../../data";
 import { PROJECT_NAME } from "../../constants";
 
 interface RootLayoutProps {
@@ -17,6 +17,8 @@ const RootLayout = ({ className }: RootLayoutProps) => {
 
   const [path, setPath] = useState<string>("home");
 
+  const [firstFocusIndex, setFirstFocusIndex] = useState(1);
+
   useEffect(() => {
     const path = pathname.split("/")[1];
 
@@ -29,10 +31,18 @@ const RootLayout = ({ className }: RootLayoutProps) => {
       if (prev !== newPath) return newPath;
       else return prev;
     });
+
+    const firstFocusIndex = navArr.findIndex(
+      (nav) => nav.path.split("/")[1] === newPath
+    );
+
+    console.log(firstFocusIndex);
+
+    setFirstFocusIndex(firstFocusIndex === -1 ? 1 : firstFocusIndex + 1);
   }, [pathname]);
 
   return (
-    <FocusTrap>
+    <FocusTrap firstFocusIndex={firstFocusIndex}>
       <div className={classNames}>
         <div className={styles["bgmode__wrapper"]}>
           <Toggle />

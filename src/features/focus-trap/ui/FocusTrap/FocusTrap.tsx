@@ -3,9 +3,10 @@ import { focusableSelectors } from "../../data";
 
 interface FocusTrapProps {
   children: ReactNode;
+  firstFocusIndex?: number;
 }
 
-const FocusTrap = ({ children }: FocusTrapProps) => {
+const FocusTrap = ({ children, firstFocusIndex = 0 }: FocusTrapProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,6 +20,10 @@ const FocusTrap = ({ children }: FocusTrapProps) => {
 
     const firstElem = focusableElems[0];
     const lastElem = focusableElems[focusableElems.length - 1];
+
+    const firstFocusElem = focusableElems[firstFocusIndex];
+
+    firstFocusElem.focus();
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key !== "Tab") return;
@@ -41,7 +46,7 @@ const FocusTrap = ({ children }: FocusTrapProps) => {
     return () => {
       container.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [firstFocusIndex]);
 
   return <div ref={containerRef}>{children}</div>;
 };
