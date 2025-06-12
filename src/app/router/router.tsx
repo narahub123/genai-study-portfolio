@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
+import { RootLayout } from "../../shared";
 
 const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <>루트</>,
+      element: <RootLayout />,
       children: [
         {
           index: true,

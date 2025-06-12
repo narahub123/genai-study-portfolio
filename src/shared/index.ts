@@ -2,25 +2,35 @@ import {} from "./assets";
 
 import {} from "./constants";
 
-import {} from "./data";
+import { navArr } from "./data";
 
 import {} from "./hooks";
 
-import {} from "./layouts";
+import { RootLayout } from "./layouts";
 
 import {} from "./ui";
 
-import {} from "./utils";
+import { joinClassNames } from "./utils";
 
-import {} from "./types";
+import type { IHeader } from "./types";
 
-export // assets
-// constants
-// data
-// hooks
-// layouts
-// ui
-// utils
- {};
+export {
+  // assets
 
-export type {};
+  // constants
+
+  // data
+  navArr,
+
+  // hooks
+
+  // layouts
+  RootLayout,
+
+  // ui
+
+  // utils
+  joinClassNames,
+};
+
+export type { IHeader };
