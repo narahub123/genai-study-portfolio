@@ -1,34 +1,34 @@
 import styles from "./RootLayout.module.css";
 import { joinClassNames } from "../../utils/index";
-import type { IHeader } from "../../types";
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Navbar, Toggle } from "../../../features";
+import { headerObj } from "../../data";
+import { PROJECT_NAME } from "../../constants";
 
 interface RootLayoutProps {
   className?: string;
 }
-
-const initialHeader: IHeader = {
-  title: "Home",
-  header: "GenAI 웹 서비스 개발 과정",
-  expl: "헤더 설명 연습 문장",
-};
 
 const RootLayout = ({ className }: RootLayoutProps) => {
   const classNames = joinClassNames([styles["root__layout"], className]);
 
   const { pathname } = useLocation();
 
-  const [header, setHeader] = useState<IHeader>(initialHeader);
+  const [path, setPath] = useState<string>("home");
 
   useEffect(() => {
     const path = pathname.split("/")[1];
 
-    if (!path) {
-      setHeader(initialHeader);
-    } else {
-    }
+    const newPath = path ? path : "home";
+
+    // title 태그 변경
+    document.title = `${PROJECT_NAME} : ${headerObj[newPath].title}`;
+
+    setPath((prev) => {
+      if (prev !== newPath) return newPath;
+      else return prev;
+    });
   }, [pathname]);
 
   return (
@@ -40,9 +40,11 @@ const RootLayout = ({ className }: RootLayoutProps) => {
         <div className={styles["header__container"]}>
           <div className={styles["header__wrapper"]}>
             <h3 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-              {header.header}
+              {headerObj[path].header}
             </h3>
-            <p style={{ fontSize: "0.9rem", color: "#555" }}>{header.expl}</p>
+            <p style={{ fontSize: "0.9rem", color: "#555" }}>
+              {headerObj[path].expl}
+            </p>
           </div>
           {
             <div className={styles["navigation__wrapper"]}>

@@ -1,8 +1,8 @@
 import {} from "./assets";
 
-import {} from "./constants";
+import { PROJECT_NAME } from "./constants";
 
-import { navArr } from "./data";
+import { navArr, headerObj } from "./data";
 
 import {} from "./hooks";
 
@@ -18,9 +18,11 @@ export {
   // assets
 
   // constants
+  PROJECT_NAME,
 
   // data
   navArr,
+  headerObj,
 
   // hooks
 

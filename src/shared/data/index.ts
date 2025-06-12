@@ -1,3 +1,4 @@
 import { navArr } from "./links";
+import headerObj from "./headerObj";
 
-export { navArr };
+export { navArr, headerObj };
