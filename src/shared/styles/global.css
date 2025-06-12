@@ -119,6 +119,9 @@ body {
   line-height: 1;
   background-color: var(--bg-color);
   color: var(--text-color);
+
+  transition: background-color var(--transition-duration-normal) ease-in-out,
+    color var(--transition-duration-normal) ease-in-out;
 }
 
 ol,

@@ -4,6 +4,7 @@ import type { IHeader } from "../../types";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { navArr } from "../../data";
+import { Toggle } from "../../../features";
 
 interface RootLayoutProps {
   className?: string;
@@ -34,8 +35,7 @@ const RootLayout = ({ className }: RootLayoutProps) => {
   return (
     <div className={classNames}>
       <div className={styles["bgmode__wrapper"]}>
-        {/* 버튼인지 토글인지 결정할 것  */}
-        <button onClick={() => {}}>버튼</button>
+        <Toggle />
       </div>
       <header className={styles["root__layout__header"]}>
         <div className={styles["header__container"]}>

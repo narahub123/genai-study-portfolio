@@ -3,4 +3,6 @@
   --color-dark: #fff3e0;
   --bg-light: #fff;
   --color-light: #1b1b1b;
+
+  --transition-duration-normal: 0.3s;
 }
