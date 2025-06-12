@@ -1,0 +1,25 @@
+/* 수동 제어용 커스텀 테마 클래스 */
+body[data-bgTheme="dark"] {
+  --bg-color: var(--bg-dark);
+  --text-color: var(--color-dark);
+}
+
+body[data-bgTheme="light"] {
+  --bg-color: var(--bg-light);
+  --text-color: var(--color-light);
+}
+
+/* prefers-color-scheme 기반 기본 테마 (선택 사항) */
+@media (prefers-color-scheme: dark) {
+  body:not([data-bgTheme]) {
+    --bg-color: var(--bg-dark);
+    --text-color: var(--color-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body:not([data-bgTheme]) {
+    --bg-color: var(--bg-light);
+    --text-color: var(--color-light);
+  }
+}
