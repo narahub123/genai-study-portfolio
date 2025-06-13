@@ -27,26 +27,14 @@
   align-items: center;
 }
 
-.root__layout__body {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid #ccc;
-}
-
 .navigation__wrapper {
   padding: 2rem 0;
   display: flex;
   justify-content: center;
 }
 
-.outlet__wrapper {
+.root__layout__body {
   flex: 1;
-  width: 100%;
-  padding: 3rem;
-  border: 1px solid #000;
-  /* 수정 예정 */
   display: flex;
   justify-content: center;
   align-items: center;

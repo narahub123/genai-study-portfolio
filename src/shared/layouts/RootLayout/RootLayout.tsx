@@ -65,9 +65,7 @@ const RootLayout = ({ className }: RootLayoutProps) => {
           </div>
         </header>
         <main className={styles["root__layout__body"]}>
-          <div className={styles["outlet__wrapper"]}>
-            <Outlet />
-          </div>
+          <Outlet />
         </main>
         <footer className={styles["root__layout__footer"]}>
           since 2025. 06. 09.
