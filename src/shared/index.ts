@@ -8,7 +8,7 @@ import {} from "./hooks";
 
 import { RootLayout } from "./layouts";
 
-import {} from "./ui";
+import { Icon } from "./ui";
 
 import { joinClassNames } from "./utils";
 
@@ -30,6 +30,7 @@ export {
   RootLayout,
 
   // ui
+  Icon,
 
   // utils
   joinClassNames,

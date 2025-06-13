@@ -1,5 +1,5 @@
 import styles from "./Dashboard.module.css";
-import { joinClassNames } from "../../shared";
+import { Icon, joinClassNames } from "../../shared";
 import { NavLink } from "react-router-dom";
 
 interface DashboardProps {}
@@ -39,6 +39,7 @@ const Dashboard = ({}: DashboardProps) => {
             key={nav.id}
             className={styles["dashboard__card"]}
           >
+            <Icon />
             <p>{nav.name}</p>
           </NavLink>
         ))}
