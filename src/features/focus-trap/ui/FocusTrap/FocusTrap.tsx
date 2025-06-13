@@ -4,9 +4,14 @@ import { focusableSelectors } from "../../data";
 interface FocusTrapProps {
   children: ReactNode;
   firstFocusIndex?: number;
+  onEscapeFocusTrap?: () => void;
 }
 
-const FocusTrap = ({ children, firstFocusIndex = 0 }: FocusTrapProps) => {
+const FocusTrap = ({
+  children,
+  firstFocusIndex = 0,
+  onEscapeFocusTrap,
+}: FocusTrapProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -26,7 +31,7 @@ const FocusTrap = ({ children, firstFocusIndex = 0 }: FocusTrapProps) => {
     firstFocusElem.focus();
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key !== "Tab") return;
+      if (e.key !== "Tab" && e.key !== "Escape") return;
 
       if (e.shiftKey) {
         if (document.activeElement === firstElem) {
@@ -38,6 +43,11 @@ const FocusTrap = ({ children, firstFocusIndex = 0 }: FocusTrapProps) => {
           e.preventDefault();
           firstElem.focus();
         }
+      }
+
+      if (e.key === "Escape" && onEscapeFocusTrap) {
+        e.preventDefault();
+        onEscapeFocusTrap();
       }
     };
 
