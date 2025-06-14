@@ -39,7 +39,7 @@ const Dashboard = ({}: DashboardProps) => {
             key={nav.id}
             className={styles["dashboard__card"]}
           >
-            <Icon iconName="toy" fontSize={"1rem"} />
+            <Icon iconName="toy" />
             <p>{nav.name}</p>
           </NavLink>
         ))}

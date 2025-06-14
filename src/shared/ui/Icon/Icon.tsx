@@ -1,13 +1,22 @@
 import styles from "./Icon.module.css";
-import { icons, joinClassNames } from "../../../shared";
+import {
+  fontSizeMap,
+  icons,
+  joinClassNames,
+  roundedMap,
+  sizeMap,
+  type FontSizeToken,
+  type RoundedToken,
+  type SizeToken,
+} from "../../../shared";
 import type { ButtonHTMLAttributes, HTMLAttributes } from "react";
 
 interface BaseProps {
   className?: string;
   iconName: keyof typeof icons;
-  size?: number | string;
-  rounded?: "50%";
-  fontSize?: number | string;
+  size?: SizeToken;
+  fontSize?: FontSizeToken;
+  rounded?: RoundedToken;
 }
 
 type ButtonIconProps = BaseProps &
@@ -28,9 +37,9 @@ const Icon = ({
   className,
   onClick,
   iconName,
-  size = "2rem",
-  fontSize = "1rem",
-  rounded = "50%",
+  size = "md",
+  fontSize = "md",
+  rounded = "full",
   ...rest
 }: IconProps) => {
   const classNames = joinClassNames([styles["icon"], className]);
@@ -46,14 +55,14 @@ const Icon = ({
         disabled={disabled}
         onClick={onClick}
         style={{
-          width: size,
-          height: size,
+          width: sizeMap[size],
+          height: sizeMap[size],
           aspectRatio: "1/1",
-          borderRadius: rounded,
+          borderRadius: roundedMap[rounded],
         }}
         {...buttonRest}
       >
-        <Inner aria-hidden="true" style={{ fontSize: fontSize }} />
+        <Inner aria-hidden="true" style={{ fontSize: fontSizeMap[fontSize] }} />
       </button>
     );
   } else {
@@ -63,14 +72,14 @@ const Icon = ({
         className={classNames}
         aria-hidden="true"
         style={{
-          width: size,
-          height: size,
+          width: sizeMap[size],
+          height: sizeMap[size],
           aspectRatio: "1/1",
-          borderRadius: rounded,
+          borderRadius: roundedMap[rounded],
         }}
         {...spanRest}
       >
-        <Inner style={{ fontSize: fontSize }} />
+        <Inner style={{ fontSize: fontSizeMap[fontSize] }} />
       </span>
     );
   }
