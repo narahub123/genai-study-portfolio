@@ -1,3 +1,3 @@
-import { ReportNavigation } from "./pages";
+import { ReportNavigation, VonNeumannArchitecture } from "./pages";
 
-export { ReportNavigation };
+export { ReportNavigation, VonNeumannArchitecture };

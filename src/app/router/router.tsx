@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "../../shared";
 import { Dashboard, Report } from "../../pages";
 import { ReportNavigation } from "../../features";
+import { VonNeumannArchitecture } from "../../features/report";
 
 const router = createBrowserRouter(
   [
@@ -22,7 +23,10 @@ const router = createBrowserRouter(
           element: <Report />,
           children: [
             { index: true, element: <ReportNavigation /> },
-            { path: "von-neumman-architecture", element: <>폰 노이만 구조</> },
+            {
+              path: "von-neumman-architecture",
+              element: <VonNeumannArchitecture />,
+            },
           ],
         },
         {
