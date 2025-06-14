@@ -1,10 +1,13 @@
 import styles from "./Icon.module.css";
+import tokens from "../../styles/tokens.module.css";
+
 import {
   fontSizeMap,
   icons,
   joinClassNames,
   roundedMap,
   sizeMap,
+  type ColorToken,
   type FontSizeToken,
   type RoundedToken,
   type SizeToken,
@@ -17,6 +20,7 @@ interface BaseProps {
   size?: SizeToken;
   fontSize?: FontSizeToken;
   rounded?: RoundedToken;
+  color?: ColorToken;
 }
 
 type ButtonIconProps = BaseProps &
@@ -40,9 +44,10 @@ const Icon = ({
   size = "md",
   fontSize = "md",
   rounded = "full",
+  color = "black",
   ...rest
 }: IconProps) => {
-  const classNames = joinClassNames([styles["icon"], className]);
+  const classNames = joinClassNames([styles["icon"], tokens[color], className]);
 
   const Inner = icons[iconName];
 
