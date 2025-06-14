@@ -27,11 +27,13 @@ type ButtonIconProps = BaseProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     onClick: (...args: any[]) => any;
     disabled?: boolean;
+    title: string;
   };
 
 type SpanIconProps = BaseProps &
   HTMLAttributes<HTMLSpanElement> & {
     onClick?: undefined;
+    title?: undefined;
   };
 
 type IconProps = ButtonIconProps | SpanIconProps;
@@ -45,6 +47,7 @@ const Icon = ({
   fontSize = "md",
   rounded = "full",
   color = "black",
+  title,
   ...rest
 }: IconProps) => {
   const classNames = joinClassNames([styles["icon"], tokens[color], className]);
@@ -65,6 +68,8 @@ const Icon = ({
           aspectRatio: "1/1",
           borderRadius: roundedMap[rounded],
         }}
+        data-title={title}
+        aria-label={title}
         {...buttonRest}
       >
         <Inner aria-hidden="true" style={{ fontSize: fontSizeMap[fontSize] }} />
