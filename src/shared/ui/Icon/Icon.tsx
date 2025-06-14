@@ -1,40 +1,49 @@
 import styles from "./Icon.module.css";
-import { joinClassNames } from "../../utils";
+import { joinClassNames } from "../../../shared";
 import type { ButtonHTMLAttributes, HTMLAttributes } from "react";
 
-type BaseProps = {
+interface BaseProps {
   className?: string;
-  disabled?: boolean;
-};
+}
 
 type ButtonIconProps = BaseProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
-    onClick: () => void; // 명확히 button으로 처리할 조건
+    onClick: (...args: any[]) => any;
+    disabled?: boolean;
   };
 
 type SpanIconProps = BaseProps &
   HTMLAttributes<HTMLSpanElement> & {
-    onClick?: undefined; // span으로 처리할 조건
+    onClick?: undefined;
   };
 
-export type IconProps = ButtonIconProps | SpanIconProps;
+type IconProps = ButtonIconProps | SpanIconProps;
 
-const Icon = ({ className, disabled = false, onClick }: IconProps) => {
+// 공통의 요소만 올 수 있음
+const Icon = ({ className, onClick, ...rest }: IconProps) => {
   const classNames = joinClassNames([styles["icon"], className]);
 
-  if (onClick) {
+  if (typeof onClick === "function") {
+    const { disabled = false, ...buttonRest } =
+      rest as ButtonHTMLAttributes<HTMLButtonElement>;
     return (
-      <button className={classNames} disabled={disabled} onClick={onClick}>
-        Icon
+      <button
+        className={classNames}
+        disabled={disabled}
+        onClick={onClick}
+        {...buttonRest}
+      >
+        icon
       </button>
     );
+  } else {
+    const { ...spanRest } = rest as HTMLAttributes<HTMLSpanElement>;
+    return (
+      <span className={classNames} aria-hidden={true} {...spanRest}>
+        Icon
+      </span>
+    );
   }
-
-  return (
-    <span className={classNames} aria-hidden={true}>
-      Icon
-    </span>
-  );
 };
 
 export default Icon;
