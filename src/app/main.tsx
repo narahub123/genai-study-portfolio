@@ -8,6 +8,7 @@ import "../shared/styles/normalize.css";
 import "../shared/styles/global.css";
 import "../shared/styles/variables.css";
 import "../shared/styles/background-theme.css";
+import "../shared/styles/tokens.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

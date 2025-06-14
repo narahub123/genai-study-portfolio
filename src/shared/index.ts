@@ -12,7 +12,9 @@ import { Icon } from "./ui";
 
 import { joinClassNames } from "./utils";
 
-import type { IHeader } from "./types";
+import { fontSizeMap, roundedMap, sizeMap } from "./tokens";
+
+import type { IHeader, FontSizeToken, SizeToken, RoundedToken } from "./types";
 
 export {
   // assets
@@ -35,6 +37,11 @@ export {
 
   // utils
   joinClassNames,
+
+  // token
+  sizeMap,
+  fontSizeMap,
+  roundedMap,
 };
 
-export type { IHeader };
+export type { IHeader, SizeToken, FontSizeToken, RoundedToken };

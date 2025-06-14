@@ -1,0 +1,27 @@
+:root {
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2.25rem;
+
+  --size-xs: calc(var(--font-size-xs) * 2);
+  --size-sm: calc(var(--font-size-sm) * 2);
+  --size-md: calc(var(--font-size-md) * 2);
+  --size-lg: calc(var(--font-size-lg) * 2);
+  --size-xl: calc(var(--font-size-xl) * 2);
+  --size-2xl: calc(var(--font-size-2xl) * 2);
+  --size-3xl: calc(var(--font-size-3xl) * 2);
+
+  --rounded-none: 0;
+  --rounded-xs: 0.125rem; /* 작고 섬세한 둥글기 */
+  --rounded-sm: 0.25rem; /* font-size-sm(0.875rem) 약 28.75% */
+  --rounded-md: 0.5rem; /* font-size-md(1rem) 50% */
+  --rounded-lg: 0.75rem; /* font-size-lg(1.25rem) 60% */
+  --rounded-xl: 1rem; /* font-size-xl(1.5rem) 66% */
+  --rounded-2xl: 1.25rem; /* font-size-2xl(1.875rem) ~66% */
+  --rounded-3xl: 1.5rem; /* font-size-3xl(2.25rem) ~66% */
+  --rounded-full: 50%; /* 완전 원형 */
+}

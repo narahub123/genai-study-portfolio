@@ -4,4 +4,6 @@ interface IHeader {
   expl: string;
 }
 
-export type { IHeader };
+import type { FontSizeToken, SizeToken, RoundedToken } from "./token";
+
+export type { IHeader, FontSizeToken, SizeToken, RoundedToken };
