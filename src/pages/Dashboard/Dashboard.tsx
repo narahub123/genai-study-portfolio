@@ -1,5 +1,5 @@
 import styles from "./Dashboard.module.css";
-import { Icon, joinClassNames } from "../../shared";
+import { Icon, icons, joinClassNames, type ColorToken } from "../../shared";
 import { NavLink } from "react-router-dom";
 
 interface DashboardProps {}
@@ -7,26 +7,40 @@ interface DashboardProps {}
 const Dashboard = ({}: DashboardProps) => {
   const classNames = joinClassNames([styles["dashboard"]]);
 
-  const navArr = [
+  const navArr: {
+    id: keyof typeof icons;
+    name: string;
+    path: string;
+    expl: string;
+    color: ColorToken;
+  }[] = [
     {
       id: "study",
-      name: "Study",
       path: "/study",
+      name: "Study",
+      expl: "공부 정리",
+      color: "green",
     },
     {
       id: "report",
-      name: "Report",
       path: "/report",
+      name: "Report",
+      expl: "과제 정리",
+      color: "purple",
     },
     {
       id: "toy",
-      name: "Toy Project",
       path: "/toy",
+      name: "Toy Project",
+      expl: "토이 프로젝트",
+      color: "purple",
     },
     {
       id: "extra",
-      name: "Extra",
       path: "/extra",
+      name: "Extra",
+      expl: "기타",
+      color: "green",
     },
   ];
 
@@ -37,10 +51,22 @@ const Dashboard = ({}: DashboardProps) => {
           <NavLink
             to={nav.path}
             key={nav.id}
-            className={styles["dashboard__card"]}
+            className={joinClassNames([
+              styles["dashboard__card"],
+              styles[nav.color],
+            ])}
           >
-            <Icon iconName="toy" />
-            <p>{nav.name}</p>
+            <div className={styles["dashboard__card__wrapper"]}>
+              <Icon
+                iconName={nav.id}
+                fontSize="2xl"
+                size="2xl"
+                className={styles["dashboard__card__icon"]}
+                color={nav.color}
+              />
+              <p className={styles["dashboard__card__title"]}>{nav.name}</p>
+              <p className={styles["dashboard__card__expl"]}> {nav.expl}</p>
+            </div>
           </NavLink>
         ))}
       </nav>
