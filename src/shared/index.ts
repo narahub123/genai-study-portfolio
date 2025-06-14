@@ -2,7 +2,7 @@ import {} from "./assets";
 
 import { PROJECT_NAME } from "./constants";
 
-import { navArr, headerObj } from "./data";
+import { navArr, headerObj, icons } from "./data";
 
 import {} from "./hooks";
 
@@ -23,6 +23,7 @@ export {
   // data
   navArr,
   headerObj,
+  icons,
 
   // hooks
 

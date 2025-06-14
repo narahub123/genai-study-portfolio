@@ -1,9 +1,10 @@
 import styles from "./Icon.module.css";
-import { joinClassNames } from "../../../shared";
+import { icons, joinClassNames } from "../../../shared";
 import type { ButtonHTMLAttributes, HTMLAttributes } from "react";
 
 interface BaseProps {
   className?: string;
+  iconName: keyof typeof icons;
 }
 
 type ButtonIconProps = BaseProps &
@@ -20,8 +21,10 @@ type SpanIconProps = BaseProps &
 type IconProps = ButtonIconProps | SpanIconProps;
 
 // 공통의 요소만 올 수 있음
-const Icon = ({ className, onClick, ...rest }: IconProps) => {
+const Icon = ({ className, onClick, iconName, ...rest }: IconProps) => {
   const classNames = joinClassNames([styles["icon"], className]);
+
+  const Inner = icons[iconName];
 
   if (typeof onClick === "function") {
     const { disabled = false, ...buttonRest } =
@@ -33,14 +36,14 @@ const Icon = ({ className, onClick, ...rest }: IconProps) => {
         onClick={onClick}
         {...buttonRest}
       >
-        icon
+        <Inner />
       </button>
     );
   } else {
     const { ...spanRest } = rest as HTMLAttributes<HTMLSpanElement>;
     return (
       <span className={classNames} aria-hidden={true} {...spanRest}>
-        Icon
+        <Inner />
       </span>
     );
   }
