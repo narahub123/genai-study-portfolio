@@ -24,4 +24,20 @@
   --rounded-2xl: 1.25rem; /* font-size-2xl(1.875rem) ~66% */
   --rounded-3xl: 1.5rem; /* font-size-3xl(2.25rem) ~66% */
   --rounded-full: 50%; /* 완전 원형 */
+
+  /* 기본 색상 */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-blue: #6495ed;
+  --color-green: #3cb371;
+  --color-red: #e55353;
+  --color-purple: #7b68ee;
+
+  /* hover 배경색 (투명도 0.15 적용) */
+  --hover-bg-black: rgba(0, 0, 0, 0.15);
+  --hover-bg-white: rgba(255, 255, 255, 0.15);
+  --hover-bg-blue: rgba(100, 149, 237, 0.15);
+  --hover-bg-green: rgba(60, 179, 113, 0.15);
+  --hover-bg-red: rgba(229, 83, 83, 0.15);
+  --hover-bg-purple: rgba(123, 104, 238, 0.15);
 }

@@ -1,0 +1,49 @@
+.black {
+  color: var(--text-color);
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+}
+
+.black:not(span):hover {
+  background: var(--hover-bg-black);
+}
+
+.blue {
+  color: var(--color-blue);
+  background-color: transparent;
+  border: 1px solid var(--color-blue);
+}
+
+.blue:not(span):hover {
+  background-color: var(--hover-bg-blue);
+}
+
+.red {
+  color: var(--color-red);
+  background-color: transparent;
+  border: 1px solid var(--color-red);
+}
+
+.red:not(span):hover {
+  background-color: var(--hover-bg-red);
+}
+
+.green {
+  color: var(--color-green);
+  background-color: transparent;
+  border: 1px solid var(--color-green);
+}
+
+.green:hover {
+  background-color: var(--hover-bg-green);
+}
+
+.purple {
+  color: var(--color-purple);
+  background-color: transparent;
+  border: 1px solid var(--color-purple);
+}
+
+.purple:hover {
+  background-color: var(--hover-bg-purple);
+}

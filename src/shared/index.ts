@@ -14,7 +14,13 @@ import { joinClassNames } from "./utils";
 
 import { fontSizeMap, roundedMap, sizeMap } from "./tokens";
 
-import type { IHeader, FontSizeToken, SizeToken, RoundedToken } from "./types";
+import type {
+  IHeader,
+  FontSizeToken,
+  SizeToken,
+  RoundedToken,
+  ColorToken,
+} from "./types";
 
 export {
   // assets
@@ -44,4 +50,4 @@ export {
   roundedMap,
 };
 
-export type { IHeader, SizeToken, FontSizeToken, RoundedToken };
+export type { IHeader, SizeToken, FontSizeToken, RoundedToken, ColorToken };

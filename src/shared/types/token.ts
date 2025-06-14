@@ -13,4 +13,6 @@ type RoundedToken =
   | "3xl"
   | "full";
 
-export type { FontSizeToken, SizeToken, RoundedToken };
+type ColorToken = "black" | "blue" | "red" | "green" | "purple";
+
+export type { FontSizeToken, SizeToken, RoundedToken, ColorToken };
