@@ -46,10 +46,6 @@
   border: 1px solid var(--color-green);
 }
 
-.green:hover {
-  background-color: var(--hover-bg-green);
-}
-
 .green:not(span):hover {
   background-color: var(--hover-bg-green);
 }
