@@ -36,13 +36,13 @@ const Icon = ({ className, onClick, iconName, ...rest }: IconProps) => {
         onClick={onClick}
         {...buttonRest}
       >
-        <Inner />
+        <Inner aria-hidden="true" />
       </button>
     );
   } else {
     const { ...spanRest } = rest as HTMLAttributes<HTMLSpanElement>;
     return (
-      <span className={classNames} aria-hidden={true} {...spanRest}>
+      <span className={classNames} aria-hidden="true" {...spanRest}>
         <Inner />
       </span>
     );
