@@ -1,3 +1,7 @@
-import { ReportNavigation, VonNeumannArchitecture } from "./pages";
+import {
+  ReportNavigation,
+  VonNeumannArchitecture,
+  SemanticAccessibilityDOM,
+} from "./pages";
 
-export { ReportNavigation, VonNeumannArchitecture };
+export { ReportNavigation, VonNeumannArchitecture, SemanticAccessibilityDOM };

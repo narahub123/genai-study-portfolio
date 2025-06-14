@@ -12,6 +12,9 @@ const ReportNavigation = ({ className }: ReportNavigationProps) => {
   return (
     <div className={classNames}>
       <Link to="von-neumman-architecture">폰 노이만 구조</Link>
+      <Link to="semantic-tages-accessibility-dom">
+        시맨틱 태그, 접근성 그리고 DOM
+      </Link>
     </div>
   );
 };

@@ -2,7 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "../../shared";
 import { Dashboard, Report } from "../../pages";
 import { ReportNavigation } from "../../features";
-import { VonNeumannArchitecture } from "../../features/report";
+import {
+  SemanticAccessibilityDOM,
+  VonNeumannArchitecture,
+} from "../../features/report";
 
 const router = createBrowserRouter(
   [
@@ -26,6 +29,10 @@ const router = createBrowserRouter(
             {
               path: "von-neumman-architecture",
               element: <VonNeumannArchitecture />,
+            },
+            {
+              path: "semantic-tages-accessibility-dom",
+              element: <SemanticAccessibilityDOM />,
             },
           ],
         },
