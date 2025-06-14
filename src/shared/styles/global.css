@@ -151,3 +151,18 @@ a {
   color: currentColor;
   text-decoration: none;
 }
+
+button {
+  all: unset;
+  /* 기본 리셋 후 필요한 최소 스타일 추가 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+span {
+  all: unset;
+  display: inline;
+}
