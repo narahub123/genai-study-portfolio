@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "../../shared";
-import { Dashboard } from "../../pages";
+import { Dashboard, Report } from "../../pages";
 
 const router = createBrowserRouter(
   [
@@ -18,7 +18,7 @@ const router = createBrowserRouter(
         },
         {
           path: "report",
-          element: <>Report</>,
+          element: <Report />,
         },
         {
           path: "toy",
