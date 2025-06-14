@@ -57,11 +57,11 @@ const RootLayout = ({ className }: RootLayoutProps) => {
                 {headerObj[path].expl}
               </p>
             </div>
-            {
+            {pathname.split("/")[1] && (
               <div className={styles["navigation__wrapper"]}>
                 <Navbar />
               </div>
-            }
+            )}
           </div>
         </header>
         <main className={styles["root__layout__body"]}>
