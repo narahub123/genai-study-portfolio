@@ -33,6 +33,7 @@ type ButtonIconProps = BaseProps &
     onClick: (...args: any[]) => any;
     disabled?: boolean;
     title: string;
+    type?: "button" | "submit" | "reset";
   };
 
 type SpanIconProps = BaseProps &
@@ -68,11 +69,15 @@ const Icon = forwardRef<HTMLButtonElement | HTMLSpanElement, IconProps>(
     const Inner = icons[iconName];
 
     if (typeof onClick === "function") {
-      const { disabled = false, ...buttonRest } =
-        rest as ButtonHTMLAttributes<HTMLButtonElement>;
+      const {
+        disabled = false,
+        type = "button",
+        ...buttonRest
+      } = rest as ButtonHTMLAttributes<HTMLButtonElement>;
       return (
         <button
           className={classNames}
+          type={type}
           disabled={disabled}
           onClick={onClick}
           style={{
