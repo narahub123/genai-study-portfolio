@@ -35,9 +35,6 @@
 
 .root__layout__body {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .root__layout__footer {
