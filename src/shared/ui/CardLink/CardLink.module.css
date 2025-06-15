@@ -2,9 +2,27 @@
   border-radius: 1rem;
   border: 1px solid #ccc;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  transition: border var(--transition-duration-normal) ease-in-out;
+}
+
+.card__link:hover {
+  border: 1px solid var(--color-blue);
 }
 
 .card__link:hover .thumbnail {
+  transform: scale(1.5);
+}
+
+.card__link:focus-visible {
+  border: 1px solid var(--color-blue);
+  outline: 2px solid var(--color-blue);
+  outline-offset: 0px;
+}
+
+.card__link:focus-visible .thumbnail {
   transform: scale(1.5);
 }
 
@@ -23,5 +41,22 @@
 }
 
 .text__wrapper {
-  padding: 1rem;
+  flex: 1;
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #999;
 }

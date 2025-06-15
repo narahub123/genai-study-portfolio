@@ -11,7 +11,12 @@ const CardLink = ({ className, report }: CardLinkProps) => {
   const classNames = joinClassNames([styles["card__link"], className]);
 
   return (
-    <Link to={report.path} className={classNames} key={report.path}>
+    <Link
+      to={report.path}
+      className={classNames}
+      key={report.path}
+      aria-label={`${report.title} 과제 상세 페이지로 이동`}
+    >
       <div
         className={joinClassNames([
           styles["thumbnail__wrapper"],
@@ -25,8 +30,8 @@ const CardLink = ({ className, report }: CardLinkProps) => {
         />
       </div>
       <div className={styles["text__wrapper"]}>
-        <p>{report.title}</p>
-        <p>{report.date}</p>
+        <p className={styles["text"]}>{report.title}</p>
+        <time className={styles["date"]}>{report.date}</time>
       </div>
     </Link>
   );
