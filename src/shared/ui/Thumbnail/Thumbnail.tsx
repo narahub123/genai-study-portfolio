@@ -20,6 +20,8 @@ const Thumbnail = ({
 }: ThumbnailProps) => {
   const classNames = joinClassNames([styles["thumbnail"], className]);
 
+  if (!src) return null;
+
   return (
     <img
       className={classNames}

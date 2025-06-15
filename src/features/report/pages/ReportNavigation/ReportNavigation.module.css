@@ -17,6 +17,10 @@
   overflow: hidden;
 }
 
+.thumbnail__wrapper--empty {
+  background-color: #000;
+}
+
 .thumbnail {
   transition: transform var(--transition-duration-normal) ease-in-out;
 }
