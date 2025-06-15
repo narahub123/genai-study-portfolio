@@ -1,2 +1,21 @@
 .report__navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 2/1;
+}
+
+.wrapper {
+  padding: 1rem;
 }
