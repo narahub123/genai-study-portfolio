@@ -11,11 +11,20 @@
   overflow: hidden;
 }
 
-.thumbnail {
+.thumbnail__wrapper {
   width: 100%;
   aspect-ratio: 2/1;
+  overflow: hidden;
 }
 
-.wrapper {
+.thumbnail {
+  transition: transform var(--transition-duration-normal) ease-in-out;
+}
+
+.card:hover .thumbnail {
+  transform: scale(1.5);
+}
+
+.text__wrapper {
   padding: 1rem;
 }

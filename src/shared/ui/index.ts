@@ -1,3 +1,4 @@
 import Icon from "./Icon";
+import Thumbnail from "./Thumbnail";
 
-export { Icon };
+export { Icon, Thumbnail };
