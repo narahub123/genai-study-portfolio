@@ -4,31 +4,3 @@
   gap: 0.5rem;
   padding: 0 1rem;
 }
-
-.card {
-  border-radius: 1rem;
-  border: 1px solid #ccc;
-  overflow: hidden;
-}
-
-.thumbnail__wrapper {
-  width: 100%;
-  aspect-ratio: 2/1;
-  overflow: hidden;
-}
-
-.thumbnail__wrapper--empty {
-  background-color: #000;
-}
-
-.thumbnail {
-  transition: transform var(--transition-duration-normal) ease-in-out;
-}
-
-.card:hover .thumbnail {
-  transform: scale(1.5);
-}
-
-.text__wrapper {
-  padding: 1rem;
-}

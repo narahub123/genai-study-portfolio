@@ -8,7 +8,7 @@ import {} from "./hooks";
 
 import { RootLayout } from "./layouts";
 
-import { Icon, Thumbnail } from "./ui";
+import { Icon, Thumbnail, CardLink } from "./ui";
 
 import { joinClassNames } from "./utils";
 
@@ -16,6 +16,7 @@ import { fontSizeMap, roundedMap, sizeMap } from "./tokens";
 
 import type {
   IHeader,
+  ICardLink,
   FontSizeToken,
   SizeToken,
   RoundedToken,
@@ -41,6 +42,7 @@ export {
   // ui
   Icon,
   Thumbnail,
+  CardLink,
 
   // utils
   joinClassNames,
@@ -51,4 +53,11 @@ export {
   roundedMap,
 };
 
-export type { IHeader, SizeToken, FontSizeToken, RoundedToken, ColorToken };
+export type {
+  IHeader,
+  ICardLink,
+  SizeToken,
+  FontSizeToken,
+  RoundedToken,
+  ColorToken,
+};

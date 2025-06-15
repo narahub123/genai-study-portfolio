@@ -1,0 +1,27 @@
+.card__link {
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.card__link:hover .thumbnail {
+  transform: scale(1.5);
+}
+
+.thumbnail__wrapper {
+  width: 100%;
+  aspect-ratio: 2/1;
+  overflow: hidden;
+}
+
+.thumbnail__wrapper--empty {
+  background-color: #000;
+}
+
+.thumbnail {
+  transition: transform var(--transition-duration-normal) ease-in-out;
+}
+
+.text__wrapper {
+  padding: 1rem;
+}

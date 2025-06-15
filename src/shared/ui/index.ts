@@ -1,4 +1,5 @@
 import Icon from "./Icon";
 import Thumbnail from "./Thumbnail";
+import CardLink from "./CardLink";
 
-export { Icon, Thumbnail };
+export { Icon, Thumbnail, CardLink };
