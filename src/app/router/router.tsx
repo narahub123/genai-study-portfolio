@@ -6,6 +6,7 @@ import {
   SemanticAccessibilityDOM,
   VonNeumannArchitecture,
 } from "../../features/report";
+import StudyNavigation from "../../features/study/pages/StudyNavigation/StudyNavigation";
 
 const router = createBrowserRouter(
   [
@@ -20,6 +21,12 @@ const router = createBrowserRouter(
         {
           path: "study",
           element: <Study />,
+          children: [
+            {
+              index: true,
+              element: <StudyNavigation />,
+            },
+          ],
         },
         {
           path: "report",

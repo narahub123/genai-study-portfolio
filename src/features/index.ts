@@ -6,6 +6,8 @@ import { FocusTrap, focusableSelectors } from "./focus-trap";
 
 import { ReportNavigation } from "./report";
 
+import { StudyNavigation } from "./study";
+
 export {
   // background-theme
   Toggle,
@@ -19,4 +21,7 @@ export {
 
   // report
   ReportNavigation,
+
+  // study
+  StudyNavigation,
 };
