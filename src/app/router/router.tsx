@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "../../shared";
-import { Dashboard, Report } from "../../pages";
+import { Dashboard, Report, Study } from "../../pages";
 import { ReportNavigation } from "../../features";
 import {
   SemanticAccessibilityDOM,
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
         },
         {
           path: "study",
-          element: <>Study</>,
+          element: <Study />,
         },
         {
           path: "report",
