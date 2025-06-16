@@ -1,3 +1,4 @@
 import StudyNavigation from "./StudyNavigation";
+import SemanticHtml from "./SemanticHtml";
 
-export { StudyNavigation };
+export { StudyNavigation, SemanticHtml };

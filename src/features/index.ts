@@ -6,7 +6,7 @@ import { FocusTrap, focusableSelectors } from "./focus-trap";
 
 import { ReportNavigation } from "./report";
 
-import { StudyNavigation } from "./study";
+import { StudyNavigation, SemanticHtml } from "./study";
 
 export {
   // background-theme
@@ -24,4 +24,5 @@ export {
 
   // study
   StudyNavigation,
+  SemanticHtml,
 };

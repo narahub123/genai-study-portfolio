@@ -1,3 +1,3 @@
-import { StudyNavigation } from "./pages";
+import { StudyNavigation, SemanticHtml } from "./pages";
 
-export { StudyNavigation };
+export { StudyNavigation, SemanticHtml };

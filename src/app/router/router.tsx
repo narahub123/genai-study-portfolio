@@ -1,12 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "../../shared";
 import { Dashboard, Report, Study } from "../../pages";
-import { ReportNavigation } from "../../features";
+import {
+  ReportNavigation,
+  SemanticHtml,
+  StudyNavigation,
+} from "../../features";
 import {
   SemanticAccessibilityDOM,
   VonNeumannArchitecture,
 } from "../../features/report";
-import StudyNavigation from "../../features/study/pages/StudyNavigation/StudyNavigation";
 
 const router = createBrowserRouter(
   [
@@ -25,6 +28,10 @@ const router = createBrowserRouter(
             {
               index: true,
               element: <StudyNavigation />,
+            },
+            {
+              path: "semantic-html",
+              element: <SemanticHtml />,
             },
           ],
         },
