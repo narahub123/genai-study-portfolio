@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "../../shared";
 import { Dashboard, Report, Study } from "../../pages";
 import {
+  CssBasic,
   ReportNavigation,
   SemanticHtml,
   StudyNavigation,
@@ -32,6 +33,10 @@ const router = createBrowserRouter(
             {
               path: "semantic-html",
               element: <SemanticHtml />,
+            },
+            {
+              path: "css-basic",
+              element: <CssBasic />,
             },
           ],
         },

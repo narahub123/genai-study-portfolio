@@ -13,6 +13,12 @@ const StudyNavigation = ({ className }: StudyNavigationProps) => {
       path: "semantic-html",
       src: "",
       title: "시맨틱 HTML",
+      date: "2025. 06.16.",
+    },
+    {
+      path: "css-basic",
+      src: "",
+      title: "css 기초",
       date: "2025. 06.17.",
     },
   ];
