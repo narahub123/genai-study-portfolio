@@ -8,8 +8,6 @@ const CSSPosition = ({}: CSSPositionProps) => {
 
   return (
     <div className={classNames}>
-      sticky 연습 left: 0, right: 0 translate 100%, css 결합자 , margin: auto
-      이해하기
       <article>
         <section className={joinClassNames([styles["section"]])}>
           <header>
