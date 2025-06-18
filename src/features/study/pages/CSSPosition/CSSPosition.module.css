@@ -1,0 +1,93 @@
+.css__position {
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0.75rem 0;
+}
+
+.section {
+  padding: 1rem;
+}
+
+.translate {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease;
+}
+
+.box1 {
+  background-color: lightblue;
+}
+
+.box2 {
+  background-color: lightgreen;
+}
+
+.box1:hover {
+  transform: translateX(100%);
+}
+
+.box2:hover {
+  transform: translateY(100%);
+}
+
+.box3 {
+  background-color: lightpink;
+}
+
+.box3:hover {
+  transform: translate(50%, 50%);
+}
+
+.box4 {
+  background-color: lightsalmon;
+}
+
+.box4:hover {
+  transform: translate(100px, -100px);
+}
+
+.wrapper {
+  margin: 0.5rem;
+}
+
+.code {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.expl {
+  padding: 0.5rem;
+}
+
+.expl::before {
+  content: "·";
+  margin-right: 0.25rem;
+  font-weight: bold;
+}
+
+.sticky {
+  position: sticky;
+  padding: 1rem;
+  background-color: coral;
+  top: 30%;
+}

@@ -21,6 +21,12 @@ const StudyNavigation = ({ className }: StudyNavigationProps) => {
       title: "css 기초",
       date: "2025. 06.17.",
     },
+    {
+      path: "css-position",
+      src: "",
+      title: "css position",
+      date: "2025. 06.18.",
+    },
   ];
 
   return (

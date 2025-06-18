@@ -3,6 +3,7 @@ import { RootLayout } from "../../shared";
 import { Dashboard, Report, Study } from "../../pages";
 import {
   CssBasic,
+  CSSPosition,
   ReportNavigation,
   SemanticHtml,
   StudyNavigation,
@@ -37,6 +38,10 @@ const router = createBrowserRouter(
             {
               path: "css-basic",
               element: <CssBasic />,
+            },
+            {
+              path: "css-position",
+              element: <CSSPosition />,
             },
           ],
         },
