@@ -5,7 +5,6 @@ import {
   CssBasic,
   CSSPosition,
   ReportNavigation,
-  SemanticHtml,
   StudyNavigation,
 } from "../../features";
 import {
@@ -30,10 +29,6 @@ const router = createBrowserRouter(
             {
               index: true,
               element: <StudyNavigation />,
-            },
-            {
-              path: "semantic-html",
-              element: <SemanticHtml />,
             },
             {
               path: "css-basic",

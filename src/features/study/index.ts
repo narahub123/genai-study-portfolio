@@ -1,3 +1,3 @@
-import { StudyNavigation, SemanticHtml, CssBasic, CSSPosition } from "./pages";
+import { StudyNavigation, CssBasic, CSSPosition } from "./pages";
 
-export { StudyNavigation, SemanticHtml, CssBasic, CSSPosition };
+export { StudyNavigation, CssBasic, CSSPosition };
