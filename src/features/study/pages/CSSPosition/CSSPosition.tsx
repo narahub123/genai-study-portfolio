@@ -107,8 +107,9 @@ const CSSPosition = ({}: CSSPositionProps) => {
                 일반 형제 결합자(Subsequent-sibling Combinator)
               </h3>
               <p className={styles["expl"]}>
-                첫번째 선택자로 선택된 요소의 다음에 나오는 모든 형제 요소
-                중에서 두번째 선택자에 부합한다면 선택
+                첫번째 선택자로{" "}
+                <b className={styles["b"]}>선택된 요소의 다음</b>에 나오는 모든
+                형제 요소 중에서 두번째 선택자에 부합한다면 선택
               </p>
               <p className={styles["code"]}>
                 {`

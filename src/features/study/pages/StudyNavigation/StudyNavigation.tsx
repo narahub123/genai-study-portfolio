@@ -10,12 +10,6 @@ const StudyNavigation = ({ className }: StudyNavigationProps) => {
 
   const studyArr: ICardLink[] = [
     {
-      path: "semantic-html",
-      src: "",
-      title: "시맨틱 HTML",
-      date: "2025. 06.16.",
-    },
-    {
       path: "css-basic",
       src: "",
       title: "css 기초",
@@ -26,6 +20,12 @@ const StudyNavigation = ({ className }: StudyNavigationProps) => {
       src: "",
       title: "css position",
       date: "2025. 06.18.",
+    },
+    {
+      path: "semantic-html",
+      src: "",
+      title: "시맨틱 HTML",
+      date: "2025. 06.19.",
     },
   ];
 
