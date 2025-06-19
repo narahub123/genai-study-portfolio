@@ -27,6 +27,18 @@ const StudyNavigation = ({ className }: StudyNavigationProps) => {
       title: "시맨틱 HTML",
       date: "2025. 06.19.",
     },
+    {
+      path: "semantic",
+      src: "",
+      title: "시맨틱 HTML",
+      date: "2025. 06.19.",
+    },
+    {
+      path: "html",
+      src: "",
+      title: "시맨틱 HTML",
+      date: "2025. 06.19.",
+    },
   ];
 
   return (

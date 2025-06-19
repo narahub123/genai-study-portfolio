@@ -60,3 +60,9 @@
   font-size: 0.9em;
   color: #999;
 }
+
+@media screen and (max-width: 600px) {
+  .card__link {
+    margin-top: 1rem;
+  }
+}
